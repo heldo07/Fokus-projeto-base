@@ -1,43 +1,31 @@
-# 🕹️ Manipulação Dinâmica do DOM com JavaScript
+# Manipulação Dinâmica do DOM com JavaScript
 
-Este projeto demonstra a aplicação prática de métodos essenciais do JavaScript para manipular o Document Object Model (DOM), permitindo a criação de interfaces interativas, responsivas e dinâmicas.
+Este projeto demonstra a aplicação prática de métodos essenciais do JavaScript para manipular o **Document Object Model (DOM)**, permitindo a criação de interfaces interativas, responsivas e dinâmicas.
+
+## 🔗 [Clique aqui para acessar o projeto em tempo real](https://heldo07.github.io/Fokus-projeto-base/)
 
 ## 📝 Descrição
-
 O objetivo deste projeto é exercitar como o JavaScript pode alterar o estado de uma página HTML em tempo real, respondendo às ações do usuário através da seleção de elementos, modificação de atributos e gerenciamento de eventos.
 
+## 🎯 Objetivos e Aprendizados
+Durante o desenvolvimento, foram alcançados os seguintes marcos técnicos:
+*   **Seletores CSS:** Identificação e utilização de seletores para interação precisa com elementos HTML via JS.
+*   **Manipulação do DOM:** Aplicação de lógica JavaScript para alterar a estrutura e o estilo da página.
+*   **Gestão de Eventos:** Controle total sobre interações do usuário, como cliques, envios de formulário e eventos de teclado.
+*   **Gestão de Estado:** Resolução de problemas complexos utilizando manipulação de **Arrays** e lógica de programação.
+*   **Persistência de Dados:** Implementação de estratégias eficientes com [LocalStorage](https://developer.mozilla.org) para garantir que as informações persistam entre as sessões do navegador.
+*   **UX Dinâmica:** Criação de interfaces que melhoram a experiência do usuário através de elementos que reagem instantaneamente.
+
 ## 🚀 Tecnologias e Métodos Utilizados
-
-Durante o desenvolvimento, foram explorados os seguintes recursos fundamentais:
-
-*   **`querySelector`**: Método principal para selecionar e capturar elementos específicos do HTML (IDs, classes ou tags) de forma precisa.
-*   **`addEventListener`**: Utilizado para monitorar e reagir a interações do usuário, como cliques e eventos de teclado, garantindo a interatividade.
-*   **`innerHTML`**: Utilizado para atualizar e alterar o conteúdo de texto e as tags HTML internas dos elementos na tela.
-*   **`setAttribute`**: Aplicado para modificar dinamicamente atributos de elementos, como a troca do caminho (`src`) de imagens ou links.
-*   **`classList`**: Empregado para gerenciar classes CSS, permitindo adicionar, remover ou alternar (`toggle`) estilos e estados visuais.
+*   `querySelector`: Seleção precisa de IDs, classes ou tags.
+*   `addEventListener`: Monitoramento de interações (cliques, formulários).
+*   `innerHTML`: Atualização dinâmica de conteúdos e tags.
+*   `setAttribute`: Modificação de atributos (como caminhos de imagens `src`).
+*   `classList`: Gerenciamento de estilos CSS (add, remove, toggle).
+*   `JSON.stringify()` / `JSON.parse()`: Essenciais para salvar e recuperar dados no navegador.
 
 ## 🛠️ Como funciona o fluxo
+1.  **Seleção:** O script localiza os elementos necessários no HTML via `querySelector`.
+2.  **Escuta:** Um ouvinte (`addEventListener`) aguarda uma ação específica do usuário (ex: um clique no botão).
+3.  **Ação e Persistência:** Ao detectar a interação, as funções disparam mudanças imediatas na interface e salvam o estado atualizado para persistência entre sessões.
 
-A lógica da aplicação segue três pilares principais:
-
-1.  **Seleção**: O script localiza os elementos necessários no HTML via `querySelector`.
-2.  **Escuta**: Um "ouvinte" (`addEventListener`) aguarda uma ação específica do usuário (ex: um clique no botão).
-3.  **Ação**: Ao detectar a interação, as funções disparam mudanças imediatas:
-    *   Alteração de textos ou títulos com `innerHTML`.
-    *   Troca de imagens ou ícones com `setAttribute`.
-    *   Atualização de cores, visibilidade ou animações via `classList`.
-
-## 💻 Exemplo Prático
-
-```javascript
-// Selecionando o botão e a imagem
-const botao = document.querySelector('#meu-botao');
-const imagem = document.querySelector('.banner');
-
-// Escutando o clique
-botao.addEventListener('click', () => {
-    // Alterando o conteúdo e o estilo
-    document.querySelector('h1').innerHTML = "Novo Título!";
-    botao.classList.toggle('ativo');
-    imagem.setAttribute('src', 'imagem-dinamica.png');
-});
